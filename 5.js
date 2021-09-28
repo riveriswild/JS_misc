@@ -1,10 +1,10 @@
 let allVoltage = new Array();
 
 class ElectricalDevice {
-  constructor(options) {
-    this.name = options.name,
+  constructor(name, voltage) {
+    this.name = name,
     this.plugged = false,
-    this.voltage = options.voltage
+    this.voltage = voltage
   }
 
   switchOn(allVoltage) {
@@ -29,12 +29,12 @@ class ElectricalDevice {
 }
 
 class LampDevice extends ElectricalDevice {
-  constructor(options) {
-    super(options);
-    this.name = options.name,
-    this.voltage = options.voltage,
-    this.brightness = options.brightness,
-    this.colour = options.colour
+  constructor(name, voltage, brightness, colour) {
+    super(name, voltage, brightness, colour);
+    this.name = name,
+    this.voltage = voltage,
+    this.brightness = brightness,
+    this.colour = colour
   }
 
   switchOn(allVoltage) {
